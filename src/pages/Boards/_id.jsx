@@ -6,6 +6,7 @@ import BoardContent from './BoardContent/BoardContent'
 import { mapOrder } from '~/utils/sorts'
 
 // import { mockData } from '~/apis/mock-data'
+
 import {
   fetchBoardDetailsAPI,
   createNewColumnAPI,
@@ -27,7 +28,8 @@ function Board() {
 
   useEffect(() => {
     // Tạm thời fix cứng boardId, flow chuẩn chỉnh về sau khi học nâng cao trực tiếp với mình là chúng ta sẽ sử dụng react-router-dom để lấy chuẩn boardId từ URL. Chi tiết hơn xem tại playlist nâng cao này: https://youtube.com/playlist?list=PLP6tw4Zpj-RJbPQfTZ0eCAXH_mHQiuf2G
-    const boardId = '6534e1b8a235025a66b644a5'
+    const boardId = '67f4c9dc9988b61fdc0adcb0'
+
     // Call API
     fetchBoardDetailsAPI(boardId).then(board => {
 
