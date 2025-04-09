@@ -34,8 +34,9 @@ function Profiles() {
         >
           <Avatar
             sx={{ width: 36, height: 36 }}
-            alt="TrungQuanDev"
-            src="https://trungquandev.com/wp-content/uploads/2023/05/main-avatar-circle-min-trungquandev-codetq.jpeg"
+            alt="Avatar Picture"
+            //https://vite.dev/guide/assets#the-public-directory
+            src="profile-pic.jpg"
           />
         </IconButton>
       </Tooltip>

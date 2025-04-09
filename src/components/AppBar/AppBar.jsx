@@ -1,15 +1,17 @@
 import { useState } from 'react'
 import Box from '@mui/material/Box'
 import ModeSelect from '~/components/ModeSelect/ModeSelect'
-import AppsIcon from '@mui/icons-material/Apps'
+import AppsIcon from '@mui/icons-material/Apps'//https://mui.com/material-ui/material-icons/?query=Apps&selected=Apps
 import { ReactComponent as TrelloIcon } from '~/assets/trello.svg'
 import SvgIcon from '@mui/material/SvgIcon'
 import Typography from '@mui/material/Typography'
+
 import Workspaces from './Menus/Workspaces'
 import Recent from './Menus/Recent'
 import Starred from './Menus/Starred'
 import Templates from './Menus/Templates'
 import Profiles from './Menus/Profiles'
+
 import Button from '@mui/material/Button'
 import TextField from '@mui/material/TextField'
 import Badge from '@mui/material/Badge'
@@ -43,6 +45,7 @@ function AppBar() {
           <Typography variant="span" sx={{ fontSize: '1.2rem', fontWeight: 'bold', color: 'white' }}>Trello</Typography>
         </Box>
 
+        {/* AppBar Buttons */}
         <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 1 }}>
           <Workspaces />
           <Recent />
