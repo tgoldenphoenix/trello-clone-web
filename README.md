@@ -2,6 +2,8 @@
 
 ## Description
 
+[Video demo](https://drive.google.com/drive/folders/1MxnPfujTQAsMMRZ-4WQ6X8R1rUjq9Wh5?usp=sharing)
+
 ## Technologies
 
 ### Main
