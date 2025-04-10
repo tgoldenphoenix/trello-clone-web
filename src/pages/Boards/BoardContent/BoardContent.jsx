@@ -54,6 +54,7 @@ function BoardContent({
   // const sensors = useSensors(pointerSensor)
   const sensors = useSensors(mouseSensor, touchSensor)
 
+  // [{}, {}, {}]
   const [orderedColumns, setOrderedColumns] = useState([])
 
   // Cùng một thời điểm chỉ có một phần tử đang được kéo (column hoặc card)
@@ -180,7 +181,8 @@ function BoardContent({
     // console.log('handleDragOver: ', event)
     const { active, over } = event
 
-    // Cần đảm bảo nếu không tồn tại active hoặc over (khi kéo ra khỏi phạm vi container) thì không làm gì (tránh crash trang)
+    // Cần đảm bảo nếu không tồn tại active hoặc over (khi kéo ra khỏi phạm vi container)
+    // thì không làm gì (tránh crash trang)
     if (!active || !over) return
 
     // activeDraggingCard: Là cái card đang được kéo
@@ -216,14 +218,17 @@ function BoardContent({
     console.log('handleDragEnd: ', event)
     const { active, over } = event
 
-    // Cần đảm bảo nếu không tồn tại active hoặc over (khi kéo ra khỏi phạm vi container) thì không làm gì (tránh crash trang)
+    // Cần đảm bảo nếu KHÔNG tồn tại active hoặc over
+    // (khi kéo ra khỏi phạm vi container DndContext)
+    // thì không làm gì (tránh crash trang)
     if (!active || !over) return
 
     // Xử lý kéo thả Cards
     if (activeDragItemType === ACTIVE_DRAG_ITEM_TYPE.CARD) {
       // activeDraggingCard: Là cái card đang được kéo
       const { id: activeDraggingCardId, data: { current: activeDraggingCardData } } = active
-      // overCard: là cái card đang tương tác trên hoặc dưới so với cái card được kéo ở trên.
+      // overCard: là cái card đang tương tác trên hoặc dưới
+      // so với cái card được kéo ở trên.
       const { id: overCardId } = over
 
       // Tìm 2 cái columns theo cardId
@@ -289,21 +294,26 @@ function BoardContent({
       // Nếu vị trí sau khi kéo thả khác với vị trí ban đầu
       if (active.id !== over.id) {
         // Lấy vị trí cũ (từ thằng active)
+        // Column.jsx:useSortable
         const oldColumnIndex = orderedColumns.findIndex(c => c._id === active.id)
         // Lấy vị trí mới (từ thằng over)
         const newColumnIndex = orderedColumns.findIndex(c => c._id === over.id)
+        // 0 1; 1 0; 0 2
 
         // Dùng arrayMove của thằng dnd-kit để sắp xếp lại mảng Columns ban đầu
         // Code của arrayMove ở đây: dnd-kit/packages/sortable/src/utilities/arrayMove.ts
         const dndOrderedColumns = arrayMove(orderedColumns, oldColumnIndex, newColumnIndex)
 
 
-        // Vẫn gọi update State ở đây để tránh delay hoặc Flickering giao diện lúc kéo thả cần phải chờ gọi API (small trick)
+        // Vẫn gọi update State ở đây để tránh delay hoặc Flickering giao diện
+        // lúc kéo thả cần phải chờ gọi API (small trick)
         setOrderedColumns(dndOrderedColumns)
         /**
          * Gọi lên props function moveColumns nằm ở component cha cao nhất (boards/_id.jsx)
-         * Lưu ý: Về sau ở học phần MERN Stack Advance nâng cao học trực tiếp mình sẽ với mình thì chúng ta sẽ đưa dữ liệu Board ra ngoài Redux Global Store,
-         * và lúc này chúng ta có thể gọi luôn API ở đây là xong thay vì phải lần lượt gọi ngược lên những component cha phía bên trên. (Đối với component con nằm càng sâu thì càng khổ :D)
+         * Lưu ý: Nếu muốn nâng hơn thì chúng ta sẽ
+         * đưa dữ liệu Board ra ngoài Redux Global Store,
+         * và lúc này chúng ta có thể gọi luôn API ở đây là xong thay vì phải
+         * lần lượt gọi ngược lên những component cha phía bên trên. (Đối với component con nằm càng sâu thì càng khổ :D)
          * - Với việc sử dụng Redux như vậy thì code sẽ Clean chuẩn chỉnh hơn rất nhiều.
         */
         moveColumns(dndOrderedColumns)

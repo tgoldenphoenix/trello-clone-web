@@ -103,7 +103,7 @@ function Board() {
    */
   const moveColumns = (dndOrderedColumns) => {
     // Update cho chuẩn dữ liệu state Board
-    const dndOrderedColumnsIds = dndOrderedColumns.map(c => c._id)
+    const dndOrderedColumnsIds = dndOrderedColumns.map(c => c._id)//[id1, id2, id3]
     const newBoard = { ...board }
     newBoard.columns = dndOrderedColumns
     newBoard.columnOrderIds = dndOrderedColumnsIds
