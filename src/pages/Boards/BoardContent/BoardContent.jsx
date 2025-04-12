@@ -26,6 +26,7 @@ import { generatePlaceholderCard } from '~/utils/formatters'
 import Column from './ListColumns/Column/Column'
 import Card from './ListColumns/Column/ListCards/Card/Card'
 
+// Am I dragging a card or a column?
 const ACTIVE_DRAG_ITEM_TYPE = {
   COLUMN: 'ACTIVE_DRAG_ITEM_TYPE_COLUMN',
   CARD: 'ACTIVE_DRAG_ITEM_TYPE_CARD'
@@ -161,7 +162,7 @@ function BoardContent({
 
   // Trigger khi bắt đầu kéo (drag) một phần tử
   const handleDragStart = (event) => {
-    // console.log('handleDragStart: ', event)
+    console.log('handleDragStart: ', event)
     setActiveDragItemId(event?.active?.id)
     setActiveDragItemType(event?.active?.data?.current?.columnId ? ACTIVE_DRAG_ITEM_TYPE.CARD : ACTIVE_DRAG_ITEM_TYPE.COLUMN)
     setActiveDragItemData(event?.active?.data?.current)
@@ -215,7 +216,7 @@ function BoardContent({
 
   // Trigger khi kết thúc hành động kéo (drag) một phần tử => hành động thả (drop)
   const handleDragEnd = (event) => {
-    console.log('handleDragEnd: ', event)
+    // console.log('handleDragEnd: ', event)
     const { active, over } = event
 
     // Cần đảm bảo nếu KHÔNG tồn tại active hoặc over
