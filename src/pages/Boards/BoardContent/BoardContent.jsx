@@ -224,7 +224,7 @@ function BoardContent({
 
   // Trigger khi kết thúc hành động kéo (drag) một phần tử => hành động thả (drop)
   const handleDragEnd = (event) => {
-    console.log('handleDragEnd: ', event)
+    // console.log('handleDragEnd: ', event)
     const { active, over } = event
 
     // Cần đảm bảo nếu KHÔNG tồn tại active hoặc over
