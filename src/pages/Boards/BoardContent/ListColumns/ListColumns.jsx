@@ -17,7 +17,7 @@ import {
 } from '~/redux/activeBoard/activeBoardSlice'
 import { useDispatch, useSelector } from 'react-redux'
 
-function ListColumns({ columns, createNewCard, deleteColumnDetails }) {
+function ListColumns({ columns }) {
   const board = useSelector(selectCurrentActiveBoard)
   const dispatch = useDispatch()
 
@@ -78,12 +78,9 @@ function ListColumns({ columns, createNewCard, deleteColumnDetails }) {
         overflowY: 'hidden',
         '&::-webkit-scrollbar-track': { m: 2 }
       }}>
-        {columns?.map(column => <Column
-          key={column._id}
-          column={column}
-          createNewCard={createNewCard}
-          deleteColumnDetails={deleteColumnDetails}
-        />)}
+        {columns?.map(column => 
+          <Column key={column._id} column={column} />
+        )}
 
         {/* Box Add new column CTA */}
         {!openNewColumnForm
