@@ -2,7 +2,7 @@
 
 ## Description
 
-[Video demo](https://drive.google.com/drive/folders/1MxnPfujTQAsMMRZ-4WQ6X8R1rUjq9Wh5?usp=sharing)
+[Video demo](https://youtu.be/UEWHVnhfnT0?si=80_zDfLcvJ1S-IS1)
 
 ## Technologies
 
