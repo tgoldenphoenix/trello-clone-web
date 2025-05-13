@@ -27,7 +27,7 @@ function Board() {
   const board = useSelector(selectCurrentActiveBoard)
 
   useEffect(() => {
-    // Tạm thời fix cứng boardId, flow chuẩn chỉnh về sau khi học nâng cao trực tiếp với mình là chúng ta sẽ sử dụng react-router-dom để lấy chuẩn boardId từ URL. Chi tiết hơn xem tại playlist nâng cao này: https://youtube.com/playlist?list=PLP6tw4Zpj-RJbPQfTZ0eCAXH_mHQiuf2G
+    // Tạm thời fix cứng boardId, flow chuẩn chỉnh về sau sẽ sử dụng react-router-dom để lấy chuẩn boardId từ URL.
     const boardId = '67f4c9dc9988b61fdc0adcb0'
 
     // Call API

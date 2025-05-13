@@ -13,7 +13,7 @@ import { generatePlaceholderCard } from '~/utils/formatters'
 import { cloneDeep } from 'lodash'
 import {
   updateCurrentActiveBoard,
-  selectCurrentActiveBoard,
+  selectCurrentActiveBoard
 } from '~/redux/activeBoard/activeBoardSlice'
 import { useDispatch, useSelector } from 'react-redux'
 
@@ -78,7 +78,7 @@ function ListColumns({ columns }) {
         overflowY: 'hidden',
         '&::-webkit-scrollbar-track': { m: 2 }
       }}>
-        {columns?.map(column => 
+        {columns?.map(column =>
           <Column key={column._id} column={column} />
         )}
 

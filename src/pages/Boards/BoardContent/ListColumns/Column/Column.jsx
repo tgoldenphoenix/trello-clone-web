@@ -142,6 +142,7 @@ function Column({ column }) {
   // Phải bọc div ở đây vì vấn đề chiều cao của column khi kéo thả sẽ có bug kiểu kiểu flickering (video 32)
   return (
     <div ref={setNodeRef} style={dndKitColumnStyles} {...attributes}>
+      {/* Box Column */}
       <Box
         {...listeners}
         sx={{
@@ -235,6 +236,7 @@ function Column({ column }) {
           </Box>
         </Box>
 
+        {/* This is a JSX comment */}
         {/* List Cards */}
         <ListCards cards={orderedCards} />
 

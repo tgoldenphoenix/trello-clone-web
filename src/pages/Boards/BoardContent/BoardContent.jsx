@@ -65,7 +65,7 @@ function BoardContent({
   const lastOverId = useRef(null)
 
   useEffect(() => {
-    // Columns đã được sắp xếp ở component cha cao nhất (boards/_id.jsx) (Video 71 đã giải thích lý do)
+    // Columns đã được sắp xếp ở component cha cao nhất (boards/_id.jsx) (v71)
     setOrderedColumns(board.columns)
   }, [board])
 
@@ -336,14 +336,14 @@ function BoardContent({
   }
 
   /**
-   * Animation khi thả (Drop) phần tử - Test bằng cách kéo xong thả trực tiếp và nhìn phần giữ chỗ Overlay (video 32)
+   * Animation khi thả (Drop) phần tử - Test bằng cách kéo xong thả trực tiếp và nhìn phần giữ chỗ Overlay (v32)
    */
   const customDropAnimation = {
     sideEffects: defaultDropAnimationSideEffects({ styles: { active: { opacity: '0.5' } } })
   }
 
   // Chúng ta sẽ custom lại chiến lược / thuật toán phát hiện va chạm
-  // tối ưu cho việc kéo thả card giữa nhiều columns (video 37 fix bug quan trọng)
+  // tối ưu cho việc kéo thả card giữa nhiều columns (v37 fix bug quan trọng)
   // args = arguments = Các Đối số, tham số
   const collisionDetectionStrategy = useCallback((args) => {
     // Trường hợp kéo column thì dùng thuật toán closestCorners là chuẩn nhất
