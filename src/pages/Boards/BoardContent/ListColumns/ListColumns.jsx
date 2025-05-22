@@ -24,6 +24,8 @@ function ListColumns({ columns }) {
   const [openNewColumnForm, setOpenNewColumnForm] = useState(false)
   const toggleOpenNewColumnForm = () => setOpenNewColumnForm(!openNewColumnForm)
 
+  // If dealing with a more complicated form, use "react-hook-form"
+  // WARNING: Thẻ input không được để null, must be an empty string
   const [newColumnTitle, setNewColumnTitle] = useState('')
 
   const addNewColumn = async () => {
@@ -43,7 +45,7 @@ function ListColumns({ columns }) {
       boardId: board._id
     })
 
-    // Khi tạo column mới thì nó sẽ chưa có card, cần xử lý vấn đề kéo thả vào một column rỗng (Nhớ lại video 37.2, code hiện tại là video 69)
+    // Khi tạo column mới thì nó sẽ chưa có card, cần xử lý vấn đề kéo thả vào một column rỗng (Nhớ lại v37.2, code hiện tại là v69)
     createdColumn.cards = [generatePlaceholderCard(createdColumn)]
     createdColumn.cardOrderIds = [generatePlaceholderCard(createdColumn)._id]
 
@@ -59,6 +61,7 @@ function ListColumns({ columns }) {
 
     // Đóng trạng thái thêm Column mới & Clear Input
     toggleOpenNewColumnForm()
+    // WARNING: Thẻ input không được để null, must be an empty string
     setNewColumnTitle('')
   }
 
