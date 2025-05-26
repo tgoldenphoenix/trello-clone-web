@@ -40,7 +40,7 @@ function Board() {
    */
   const moveColumns = (dndOrderedColumns) => {
     // Update cho chuẩn dữ liệu state Board
-    const dndOrderedColumnsIds = dndOrderedColumns.map(c => c._id)//[id1, id2, id3]
+    const dndOrderedColumnsIds = dndOrderedColumns.map(c => c._id) //[id1, id2, id3]
 
     /**
     * Trường hợp dùng Spread Operator này thì lại không sao bởi vì ở đây chúng ta không dùng push như ở trên làm thay đổi trực tiếp kiểu mở rộng mảng, mà chỉ đang gán lại toàn bộ giá trị columns và columnOrderIds bằng 2 mảng mới. Tương tự như cách làm concat ở trường hợp createNewColumn thôi :))

@@ -312,17 +312,12 @@ function BoardContent({
         // Code của arrayMove ở đây: dnd-kit/packages/sortable/src/utilities/arrayMove.ts
         const dndOrderedColumns = arrayMove(orderedColumns, oldColumnIndex, newColumnIndex)
 
-
         // Vẫn gọi update State ở đây để tránh delay hoặc Flickering giao diện
         // lúc kéo thả cần phải chờ gọi API (small trick)
         setOrderedColumns(dndOrderedColumns)
         /**
          * Gọi lên props function moveColumns nằm ở component cha cao nhất (boards/_id.jsx)
-         * Lưu ý: Nếu muốn nâng hơn thì chúng ta sẽ
-         * đưa dữ liệu Board ra ngoài Redux Global Store,
-         * và lúc này chúng ta có thể gọi luôn API ở đây là xong thay vì phải
-         * lần lượt gọi ngược lên những component cha phía bên trên. (Đối với component con nằm càng sâu thì càng khổ :D)
-         * - Với việc sử dụng Redux như vậy thì code sẽ Clean chuẩn chỉnh hơn rất nhiều.
+         * Có thể dùng Redux
         */
         moveColumns(dndOrderedColumns)
       }
@@ -342,7 +337,7 @@ function BoardContent({
     sideEffects: defaultDropAnimationSideEffects({ styles: { active: { opacity: '0.5' } } })
   }
 
-  // Chúng ta sẽ custom lại chiến lược / thuật toán phát hiện va chạm
+  // Custom lại chiến lược / thuật toán phát hiện va chạm
   // tối ưu cho việc kéo thả card giữa nhiều columns (v37 fix bug quan trọng)
   // args = arguments = Các Đối số, tham số
   const collisionDetectionStrategy = useCallback((args) => {
@@ -392,16 +387,16 @@ function BoardContent({
 
   return (
     <DndContext
-      // Cảm biến (đã giải thích kỹ ở video số 30)
+      // Cảm biến (v30)
       sensors={sensors}
 
       // Thuật toán phát hiện va chạm (nếu không có nó thì card với cover lớn sẽ không kéo qua Column được
       // vì lúc này nó đang bị conflict giữa card và column), chúng ta sẽ dùng closestCorners thay vì closestCenter
       // https://docs.dndkit.com/api-documentation/context-provider/collision-detection-algorithms
-      // Update video 37: nếu chỉ dùng closestCorners sẽ có bug flickering + sai lệch dữ liệu (vui lòng xem video 37 sẽ rõ)
+      // Update v37: nếu chỉ dùng closestCorners sẽ có bug flickering + sai lệch dữ liệu (vui lòng xem v37 sẽ rõ)
       // collisionDetection={closestCorners}
 
-      // Tự custom nâng cao thuật toán phát hiện va chạm (video fix bug số 37)
+      // Tự custom nâng cao thuật toán phát hiện va chạm (fix bug v37)
       collisionDetection={collisionDetectionStrategy}
 
       onDragStart={handleDragStart}
