@@ -123,7 +123,7 @@ function Board() {
         height: '100vh'
       }}>
         <CircularProgress />
-        <Typography>Loading Board...</Typography>
+        <Typography>Loading Boards &#40; would take about 40 seconds &#41;, please be patient...</Typography>
       </Box>
     )
   }
