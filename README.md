@@ -1,10 +1,18 @@
 # Trello web
 
-![Banner](/images/banner.png)
+![Banner](./screenshots/light-trello.png)
 
 Trello is a web-based, kanban-style, list-making application.
 
 Users can create task boards with different columns and move the tasks between them. Typically columns include task statuses such as To Do, In Progress, Done. The tool can be used for personal and business purposes including real estate management, software project management, school bulletin boards, lesson planning, accounting, web design, gaming, and law office case management.
+
+## Demo
+
+[live]()
+
+[Video demo](https://youtu.be/UEWHVnhfnT0?si=80_zDfLcvJ1S-IS1)
+
+[api back-end repo link for this project]()
 
 ## Application Requirements 👀
 
@@ -22,18 +30,14 @@ Users can create task boards with different columns and move the tasks between t
 
 </details>
 
-## Description
-
-[Video demo](https://youtu.be/UEWHVnhfnT0?si=80_zDfLcvJ1S-IS1)
-
-[api back-end repo link for this project]()
-
 ## Technologies
 
 ### Main
 
 - ReactJS
 - Drag and Drop using [dnd kit](https://dndkit.com/)
+- Material UI
+- react-toastify
 
 ### Others
 
