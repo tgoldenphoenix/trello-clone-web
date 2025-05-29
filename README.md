@@ -48,7 +48,9 @@ Users can create task boards with different columns and move the tasks between t
 
 <summary>Open to read</summary>
 
-🔵 LITERRALY, this project is the single place I bundled EVERY SINGLE KNOWLEDGE I GAINNED about React into ONCE PLACE.
+🔵 I try to apply all my ReactJS knowledge into this project.
+
+🔵 Best practice Project structure, easy to read and manage
 
 🔵 Professional large frontend application planning.
 
@@ -58,7 +60,7 @@ and then Break the application into categories of features.
 
 Choosing suitable Technology Stack for high quality frontend development.
 
-🔵 Database with MongoDB
+🔵 Database with MongoDB Atlas
 
 🔵 Building large React application with best libraries in React Ecosystem
 
@@ -68,8 +70,6 @@ Choosing suitable Technology Stack for high quality frontend development.
 
 Examples: Reusable Modal Component, Confirm Component, and Table Component with custom styling, and Compount Pattern, Select, Client Side Sort, Filter, Pagination...
 
-🔵 This application built with `Performance and Accessibility` in mind.
-
-🔵 Applied Advanced React Patterns likes Custom Hooks, High Order Component (HOC), Render Props, Compound components.
+🔵 This application is built with `Performance and Accessibility` in mind.
 
 </details>
