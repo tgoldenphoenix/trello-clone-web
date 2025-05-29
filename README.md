@@ -1,4 +1,4 @@
-# Trello web
+# Trello - MERN stack kanba style Work management web application
 
 ![Banner](./screenshots/light-trello.png)
 
@@ -8,11 +8,9 @@ Users can create task boards with different columns and move the tasks between t
 
 ## Demo
 
-[live]()
+[Deployment link](https://trello-web-sage-psi.vercel.app/) (Please wait a few seconds for the data to load correctly)
 
-[Video demo](https://youtu.be/UEWHVnhfnT0?si=80_zDfLcvJ1S-IS1)
-
-[api back-end repo link for this project]()
+[api back-end repo link for this project](https://github.com/tgoldenphoenix/trello-clone-api)
 
 ## Application Requirements 👀
 
@@ -30,21 +28,11 @@ Users can create task boards with different columns and move the tasks between t
 
 </details>
 
-## Technologies
+## Detail Technologies
 
-### Main
-
-- ReactJS
-- Drag and Drop using [dnd kit](https://dndkit.com/)
-- Material UI
-- react-toastify
-
-### Others
-
-- ESLint
-- [Node Version Manager](https://github.com/nvm-sh/nvm)
-- Yarn package managers
-- Vite - build tool
+- **Front-end**: ReactJS, Material UI, Redux, [DND kit library](https://dndkit.com/), React-toastify, Axios, cross-env
+- **Back-end**: RESTful API built with NodeJS, Express Framework, cors
+- **Built tools**: Vite, ESLint, Yarn, Babel, Node Version Manager
 
 ### Requirements, Semantic Versioning
 
@@ -52,8 +40,6 @@ Users can create task boards with different columns and move the tasks between t
 * nodejs >= 18.16.0
 * npm = v9.8.1
 * yarn = v1.22.19
-
-* Các gói thư viện trong file package.json (dependencies & devDependencies) đều đã fix đúng phiên bản rồi nhé. Vui lòng không tự update nếu không có kinh nghiệm và không biết cách xử lý Bug phát sinh khó lường về sau.
 ```
 
 ## What I gained from building this project 😎
