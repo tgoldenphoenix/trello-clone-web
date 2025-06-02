@@ -17,7 +17,7 @@ import Typography from '@mui/material/Typography'
 import {
   fetchBoardDetailsAPI,
   updateCurrentActiveBoard,
-  selectCurrentActiveBoard,
+  selectCurrentActiveBoard
 } from '~/redux/activeBoard/activeBoardSlice'
 import { useDispatch, useSelector } from 'react-redux'
 

@@ -52,6 +52,12 @@ function ListColumns({ columns }) {
     // Cập nhật state board
     // Phía Front-end chúng ta phải tự làm đúng lại state data board (thay vì phải gọi lại api fetchBoardDetailsAPI)
     // Lưu ý: cách làm này phụ thuộc vào tùy lựa chọn và đặc thù dự án, có nơi thì BE sẽ hỗ trợ trả về luôn toàn bộ Board dù đây có là api tạo Column hay Card đi chăng nữa. => Lúc này FE sẽ nhàn hơn.
+    /**
+    * Đoạn này sẽ dính lỗi object is not extensible bởi dù đã copy/clone ra giá trị newBoard nhưng bản chất của spread operator là Shallow Copy/Clone, nên dính phải rules Immutability trong Redux Toolkit không dùng được hàm PUSH (sửa giá trị mảng trực tiếp), cách đơn giản nhanh gọn nhất ở trường hợp này của chúng ta là dùng tới Deep Copy/Clone toàn bộ cái Board cho dễ hiểu và code ngắn gọn.
+    * https://redux-toolkit.js.org/usage/immer-reducers
+    * Tài liệu thêm về Shallow và Deep Copy Object trong JS:
+    * https://www.javascripttutorial.net/object/3-ways-to-copy-objects-in-javascript/
+    */
     // const newBoard = { ...board }
     const newBoard = cloneDeep(board)
     newBoard.columns.push(createdColumn)
