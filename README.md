@@ -20,11 +20,15 @@ Users can create task boards with different columns and move the tasks between t
 
 <br />
 
-👉 Users can create task boards with different columns and move the tasks between them.
+👉 Users can create new column and add cards to those column
 
-👉 Users should be able to delete columns and cards (tasks) inside of columns
+👉 Users can change columns' order by drag and drop
 
-👍 App needs Dark Mode.
+👉 Users can drag and drop cards in the same column
+
+👉 Users can also drag and drop card to other columns in the same board
+
+👍 App needs Dark Mode and user can set light or dark mode based on computer preference.
 
 </details>
 
@@ -32,6 +36,7 @@ Users can create task boards with different columns and move the tasks between t
 
 - **Front-end**: ReactJS, Material UI, Redux, [DND kit library](https://dndkit.com/), React-toastify, Axios, cross-env
 - **Back-end**: RESTful API built with NodeJS, Express Framework, cors
+- **Database**: MongoDB Atlas, [Joi](https://www.npmjs.com/package/joi) schema description language
 - **Built tools**: Vite, ESLint, Yarn, Babel, Node Version Manager
 
 ### Requirements, Semantic Versioning

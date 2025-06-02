@@ -135,6 +135,7 @@ function Board() {
       <BoardContent
         board={board}
 
+        // createNewColumn={createNewColumn}
         // createNewCard={createNewCard}
         // deleteColumnDetails={deleteColumnDetails}
 

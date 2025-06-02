@@ -65,6 +65,13 @@ function ListColumns({ columns }) {
     // setBoard(newBoard)
     dispatch(updateCurrentActiveBoard(newBoard))
 
+    /**
+    * Ngoài ra cách nữa là vẫn có thể dùng array.concat thay cho push như docs của Redux Toolkit ở trên vì push như đã nói nó sẽ thay đổi giá trị mảng trực tiếp, còn thằng concat thì nó merge - ghép mảng lại và tạo ra một mảng mới để chúng ta gán lại giá trị nên không vấn đề gì.
+    */
+    // const newBoard = { ...board }
+    // newBoard.columns = newBoard.columns.concat([createdColumn])
+    // newBoard.columnOrderIds = newBoard.columnOrderIds.concat([createdColumn._id])
+
     // Đóng trạng thái thêm Column mới & Clear Input
     toggleOpenNewColumnForm()
     // WARNING: Thẻ input không được để null, must be an empty string
