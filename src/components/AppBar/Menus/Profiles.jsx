@@ -36,7 +36,7 @@ function Profiles() {
             sx={{ width: 36, height: 36 }}
             alt="Avatar Picture"
             //https://vite.dev/guide/assets#the-public-directory
-            src="profile-pic.jpg"
+            src="/src/assets/profile-pic.jpg"
           />
         </IconButton>
       </Tooltip>
