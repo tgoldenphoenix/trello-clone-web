@@ -57,13 +57,11 @@ Users can create task boards with different columns and move the tasks between t
 
 🔵 Best practice Project structure, easy to read and manage
 
-🔵 Professional large frontend application planning.
+🔵 Professional large frontend application planning:
 
-From gather business requirements, frontend architecture, thinking about the data flow through the entire application
-
-and then Break the application into categories of features.
-
-Choosing suitable Technology Stack for high quality frontend development.
+- From gather business requirements, frontend architecture, thinking about the data flow through the entire application
+- and then Break the application into categories of features.
+- Choosing suitable Technology Stack for high quality frontend development.
 
 🔵 Database with MongoDB Atlas
 
