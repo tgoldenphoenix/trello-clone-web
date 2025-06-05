@@ -54,6 +54,8 @@ Users can create task boards with different columns and move the tasks between t
 
 <summary>Open to read</summary>
 
+<br />
+
 🔵 I try to apply all my ReactJS knowledge into this project.
 
 🔵 Best practice Project structure, easy to read and manage
