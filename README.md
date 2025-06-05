@@ -8,9 +8,11 @@ Users can create task boards with different columns and move the tasks between t
 
 ## Demo
 
-[Deployment link](https://trello-web-sage-psi.vercel.app/) (Please wait a few seconds for the data to load correctly)
+<!-- [Deployment link](https://trello-web-sage-psi.vercel.app/) (Please wait a few seconds for the data to load correctly) -->
 
-[api back-end repo link for this project](https://github.com/tgoldenphoenix/trello-clone-api)
+[video demo](youtube.com)
+
+[back-end github repo](https://github.com/tgoldenphoenix/trello-clone-api)
 
 ## Application Requirements 👀
 
@@ -32,20 +34,19 @@ Users can create task boards with different columns and move the tasks between t
 
 </details>
 
-## Detail Technologies
+## Technologies
 
-- **Front-end**: ReactJS, Material UI, Redux, [DND kit library](https://dndkit.com/), React-toastify, Axios, cross-env
-- **Back-end**: RESTful API built with NodeJS, Express Framework, cors
-- **Database**: MongoDB Atlas, [Joi](https://www.npmjs.com/package/joi) schema description language
+### Main technologies
+
+- **Front-end**: ReactJS, Material UI, Redux, [DND kit library](https://dndkit.com/)
+- **Back-end**: RESTful API built with NodeJS (Express Framework)
+- **Database**: MongoDB Atlas
 - **Built tools**: Vite, ESLint, Yarn, Babel, Node Version Manager
 
-### Requirements, Semantic Versioning
+### Detail technologies
 
-```
-* nodejs >= 18.16.0
-* npm = v9.8.1
-* yarn = v1.22.19
-```
+- **Front-end**: React-toastify, Axios, cross-env, React-router-dom
+- **Back-end**: cors, [Joi](https://www.npmjs.com/package/joi) schema description language
 
 ## What I gained from building this project 😎
 
