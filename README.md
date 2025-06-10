@@ -56,19 +56,20 @@ Users can create task boards with different columns and move the tasks between t
 
 <br />
 
-🔵 I try to apply all my ReactJS knowledge into this project.
+🔵 I try to apply all my knowledge into this project and follow best practices for clean coding.
 
-🔵 Best practice Project structure, easy to read and manage
+🔵 Manage sensitive environment variables such as API keys using [dotenv](https://www.npmjs.com/package/dotenv) & [cross-env](https://www.npmjs.com/package/cross-env). All sensitive data are stored in a single file `.env` which must NOT be pushed to Github.
+
+🔵 Project file structure follow best practice which makes it easy to read, maintain and keeping each source codes file modular and reusable.
+
+- Front-end ReactJS: pages, components, redux, apis, assets, customLibraries
+- Back-end Express: routes, middlewares, controllers, services, models, config, utils, etc...
 
 🔵 Professional large frontend application planning:
 
 - From gather business requirements, frontend architecture, thinking about the data flow through the entire application
 - and then Break the application into categories of features.
 - Choosing suitable Technology Stack for high quality frontend development.
-
-🔵 Database with MongoDB Atlas
-
-🔵 Building large React application with best libraries in React Ecosystem
 
 🔵 Managing Remote Server state in application with React Query, there's no Redux in this application. Use Redux to manage state
 
