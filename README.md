@@ -6,11 +6,11 @@ Trello is a web-based, kanban-style, list-making application.
 
 Users can create task boards with different columns and move the tasks between them. Typically columns include task statuses such as To Do, In Progress, Done. The tool can be used for personal and business purposes including real estate management, software project management, school bulletin boards, lesson planning, accounting, web design, gaming, and law office case management.
 
-## Demo
+<!-- ## Demo -->
 
 <!-- [Deployment link](https://trello-web-sage-psi.vercel.app/) (Please wait a few seconds for the data to load correctly) -->
 
-[video demo](youtube.com)
+<!-- [video demo](youtube.com) -->
 
 [back-end github repo](https://github.com/tgoldenphoenix/trello-clone-api)
 
