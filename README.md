@@ -22,6 +22,10 @@ Users can create task boards with different columns and move the tasks between t
 
 <br />
 
+👉 Users can create new account using their email
+
+👉 Users must verify their email by clicking a verification link sent to their inbox
+
 👉 Users can create new column and add cards to those column
 
 👉 Users can change columns' order by drag and drop
@@ -39,13 +43,13 @@ Users can create task boards with different columns and move the tasks between t
 ### Main technologies
 
 - **Front-end**: ReactJS, Material UI, Redux, [DND kit library](https://dndkit.com/)
-- **Back-end**: RESTful API built with NodeJS (Express Framework)
+- **Back-end**: RESTful API built with NodeJS (Express Framework), [Resend](https://resend.com/docs/introduction) EaaS
 - **Database**: MongoDB Atlas
 - **Built tools**: Vite, ESLint, Yarn, Babel, Node Version Manager
 
 ### Detail technologies
 
-- **Front-end**: React-toastify, Axios, cross-env, React-router-dom
+- **Front-end**: React-toastify, Axios, cross-env, React-router-dom, react-hook-form
 - **Back-end**: cors, [Joi](https://www.npmjs.com/package/joi) schema description language
 
 ## What I gained from building this project 😎
@@ -65,17 +69,19 @@ Users can create task boards with different columns and move the tasks between t
 - Front-end ReactJS: pages, components, redux, apis, assets, customLibraries
 - Back-end Express: routes, middlewares, controllers, services, models, config, utils, etc...
 
+🔵 Front-end form validation with regex and **react-hook-form**. Back-end validation with [joi](https://www.npmjs.com/package/joi)
+
+🔵 Managing Front-end states in application with **Redux**.
+
+🔵 Write highly reusable **React Functional Components**, with custom styling by leveraging Material UI `styled-component`
+
+Examples: Reusable AppBar Component, FieldErrorAlert Component, and ModeSelect Component with custom styling
+
 🔵 Professional large frontend application planning:
 
 - From gather business requirements, frontend architecture, thinking about the data flow through the entire application
 - and then Break the application into categories of features.
 - Choosing suitable Technology Stack for high quality frontend development.
-
-🔵 Managing Remote Server state in application with React Query, there's no Redux in this application. Use Redux to manage state
-
-🔵 Write highly reusable React Functional Component, with custom styling by leveraging Material UI `styled-component`
-
-Examples: Reusable Modal Component, Confirm Component, and Table Component with custom styling, and Compount Pattern, Select, Client Side Sort, Filter, Pagination...
 
 🔵 This application is built with `Performance and Accessibility` in mind.
 
