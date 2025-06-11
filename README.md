@@ -43,13 +43,13 @@ Users can create task boards with different columns and move the tasks between t
 ### Main technologies
 
 - **Front-end**: ReactJS, Material UI, Redux, [DND kit library](https://dndkit.com/)
-- **Back-end**: RESTful API built with NodeJS (Express Framework), [Resend](https://resend.com/docs/introduction) EaaS
+- **Back-end**: RESTful API built with NodeJS (Express Framework), [Resend](https://resend.com/about) EaaS
 - **Database**: MongoDB Atlas
 - **Built tools**: Vite, ESLint, Yarn, Babel, Node Version Manager
 
 ### Detail technologies
 
-- **Front-end**: React-toastify, Axios, cross-env, React-router-dom, react-hook-form
+- **Front-end**: React-toastify, Axios, cross-env, React-router-dom, React-hook-form
 - **Back-end**: cors, [Joi](https://www.npmjs.com/package/joi) schema description language
 
 ## What I gained from building this project 😎
@@ -69,7 +69,7 @@ Users can create task boards with different columns and move the tasks between t
 - Front-end ReactJS: pages, components, redux, apis, assets, customLibraries
 - Back-end Express: routes, middlewares, controllers, services, models, config, utils, etc...
 
-🔵 Front-end form validation with regex and **react-hook-form**. Back-end validation with [joi](https://www.npmjs.com/package/joi)
+🔵 Front-end form validation with regex and **react-hook-form**. Back-end data validation with [joi](https://www.npmjs.com/package/joi)
 
 🔵 Managing Front-end states in application with **Redux**.
 
@@ -83,6 +83,6 @@ Examples: Reusable AppBar Component, FieldErrorAlert Component, and ModeSelect C
 - and then Break the application into categories of features.
 - Choosing suitable Technology Stack for high quality frontend development.
 
-🔵 This application is built with `Performance and Accessibility` in mind.
+🔵 This application is built with **Performance and Accessibility** in mind.
 
 </details>
