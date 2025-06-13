@@ -43,11 +43,11 @@ Users can create task boards with different columns and move the tasks between t
 ### Main technologies
 
 - **Front-end**: ReactJS, Material UI, Redux, [DND kit library](https://dndkit.com/)
-- **Back-end**: RESTful API built with NodeJS (Express Framework), [Resend](https://resend.com/about) EaaS
+- **Back-end**: RESTful API built with NodeJS (Express Framework), [Resend](https://resend.com/about) EaaS, JSON Web Token
 - **Database**: MongoDB Atlas
 - **Built tools**: Vite, ESLint, Yarn, Babel, Node Version Manager
 
-### Detail technologies
+### Secondary technologies
 
 - **Front-end**: React-toastify, Axios, cross-env, React-router-dom, React-hook-form
 - **Back-end**: cors, [Joi](https://www.npmjs.com/package/joi) schema description language
