@@ -43,13 +43,13 @@ Users can create task boards with different columns and move the tasks between t
 ### Main technologies
 
 - **Front-end**: ReactJS, Material UI, Redux, [DND kit library](https://dndkit.com/)
-- **Back-end**: RESTful API built with NodeJS (Express Framework), [Resend](https://resend.com/about) EaaS, JSON Web Token
+- **Back-end**: RESTful API built with NodeJS (Express Framework), [Resend](https://resend.com/about) EaaS, JSON Web Token Authorization & Authentication (stored in HttpOnly Cookie)
 - **Database**: MongoDB Atlas
 - **Built tools**: Vite, ESLint, Yarn, Babel, Node Version Manager
 
 ### Secondary technologies
 
-- **Front-end**: React-toastify, Axios, cross-env, React-router-dom, React-hook-form
+- **Front-end**: [Redux persist](https://www.npmjs.com/package/redux-persist), React-toastify, Axios, cross-env, React-router-dom, React-hook-form
 - **Back-end**: cors, [Joi](https://www.npmjs.com/package/joi) schema description language
 
 ## What I gained from building this project 😎
@@ -64,14 +64,26 @@ Users can create task boards with different columns and move the tasks between t
 
 🔵 Manage sensitive environment variables such as API keys using [dotenv](https://www.npmjs.com/package/dotenv) & [cross-env](https://www.npmjs.com/package/cross-env). All sensitive data are stored in a single file `.env` which must NOT be pushed to Github.
 
-🔵 Project file structure follow best practice which makes it easy to read, maintain and keeping each source codes file modular and reusable.
+🔵 Token-based Authentication & Authorization with JWT
+
+The access token & refresh token is stored as [HttpOnly cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#httponly) which forbids JavaScript from accessing the cookie. The cookie will be send with HTTP request to the server
+
+🔵 Front-end routing
+
+Using `ProtectedRoute`, if user not log in => always re-direct to `/login` page
+
+🔵 Project file structure follows best practice which makes it easy to read, maintain and keeping each source codes file modular and reusable.
 
 - Front-end ReactJS: pages, components, redux, apis, assets, customLibraries
 - Back-end Express: routes, middlewares, controllers, services, models, config, utils, etc...
 
 🔵 Front-end form validation with regex and **react-hook-form**. Back-end data validation with [joi](https://www.npmjs.com/package/joi)
 
-🔵 Managing Front-end states in application with **Redux**.
+🔵 Managing Front-end states in application with **Redux**:
+
+Using [Redux persist](https://www.npmjs.com/package/redux-persist) to store user slice into local storage. When user reload page, the user slice is not erased.
+
+🔵 Give users a way to toggle between light modes, dark mode and system preference by using Material UI `useColorScheme` hook.
 
 🔵 Write highly reusable **React Functional Components**, with custom styling by leveraging Material UI `styled-component`
 
