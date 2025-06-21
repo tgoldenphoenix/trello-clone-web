@@ -10,6 +10,7 @@ const initialState = {
 
 export const logoutUserAPI = createAsyncThunk(
   'user/logoutUserAPI',
+  // default value is true
   async (showSuccessMessage = true) => {
     const response = await authorizedAxiosInstance.delete(`${API_ROOT}/v1/users/logout`)
     if (showSuccessMessage) {

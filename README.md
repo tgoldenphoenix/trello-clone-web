@@ -49,7 +49,7 @@ Users can create task boards with different columns and move the tasks between t
 
 ### Secondary technologies
 
-- **Front-end**: [Redux persist](https://www.npmjs.com/package/redux-persist), React-toastify, Axios, cross-env, React-router-dom, React-hook-form
+- **Front-end**: [Redux persist](https://www.npmjs.com/package/redux-persist), React-toastify, Axios (custom interceptors), cross-env, React-router-dom (protected routes), React-hook-form
 - **Back-end**: cors, [Joi](https://www.npmjs.com/package/joi) schema description language
 
 ## What I gained from building this project 😎
@@ -68,9 +68,18 @@ Users can create task boards with different columns and move the tasks between t
 
 The access token & refresh token is stored as [HttpOnly cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#httponly) which forbids JavaScript from accessing the cookie. The cookie will be send with HTTP request to the server
 
+🔵 Writing custom [Axios interceptors](https://github.com/tgoldenphoenix/trello-clone-web/blob/main/src/utils/authorizeAxios.js)
+
+- Prevent spam-clicking in form submit buttons.
+- Handle all responses' error status code & message in one place (clean code)
+
 🔵 Front-end routing
 
 Using `ProtectedRoute`, if user not log in => always re-direct to `/login` page
+
+🔵 Back-end routing:
+
+Route, Middleware, Validation, Controller, Service, Model
 
 🔵 Project file structure follows best practice which makes it easy to read, maintain and keeping each source codes file modular and reusable.
 
@@ -83,7 +92,7 @@ Using `ProtectedRoute`, if user not log in => always re-direct to `/login` page
 
 Using [Redux persist](https://www.npmjs.com/package/redux-persist) to store user slice into local storage. When user reload page, the user slice is not erased.
 
-🔵 Give users a way to toggle between light modes, dark mode and system preference by using Material UI `useColorScheme` hook.
+🔵 Give users a way to toggle between light modes, dark mode and system preference by using Material UI `useColorScheme` hook. Also stored user's preference in local storage.
 
 🔵 Write highly reusable **React Functional Components**, with custom styling by leveraging Material UI `styled-component`
 
@@ -95,6 +104,19 @@ Examples: Reusable AppBar Component, FieldErrorAlert Component, and ModeSelect C
 - and then Break the application into categories of features.
 - Choosing suitable Technology Stack for high quality frontend development.
 
-🔵 This application is built with **Performance and Accessibility** in mind.
+🔵 This application is built with **Performance and Maintainability** in mind.
+
+</details>
+
+
+## Database schema
+
+<details> 
+
+<summary>Open to read</summary>
+
+<br />
+
+![Database Schema](./screenshots/Database-schema.png)
 
 </details>
