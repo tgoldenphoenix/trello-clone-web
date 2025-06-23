@@ -64,7 +64,7 @@ authorizedAxiosInstance.interceptors.response.use((response) => {
   // Trường hợp 2: Nếu như nhận mã 410 (Gone) từ BE, thì sẽ gọi api refresh token để làm mới lại accessToken
   // Trường hợp 2 > Bước 1: Đầu tiên lấy được các request API đang bị lỗi thông qua error.config
   const originalRequests = error.config
-  console.log('originalRequests: ', originalRequests)
+  // console.log('originalRequests: ', originalRequests)
 
   // if (error.response?.status === 410 && !originalRequests._retry) {
   if (error.response?.status === 410 && originalRequests) {

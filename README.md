@@ -26,6 +26,12 @@ Users can create task boards with different columns and move the tasks between t
 
 👉 Users must verify their email by clicking a verification link sent to their inbox
 
+👉 Users can login, logout and switch account. Users must login again after 2 weeks
+
+👉 Users can change account information: displayed user name, password
+
+👉 Users can upload image as avatar
+
 👉 Users can create new column and add cards to those column
 
 👉 Users can change columns' order by drag and drop
@@ -66,7 +72,8 @@ Users can create task boards with different columns and move the tasks between t
 
 🔵 Token-based Authentication & Authorization with JWT
 
-The access token & refresh token is stored as [HttpOnly cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#httponly) which forbids JavaScript from accessing the cookie. The cookie will be send with HTTP request to the server
+- The access token & refresh token is stored as [HttpOnly cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#httponly) which forbids JavaScript from accessing the cookie. The cookie will be send with HTTP request to the server
+- Use Axios Interceptor to refresh JWT on the front-end
 
 🔵 Writing custom [Axios interceptors](https://github.com/tgoldenphoenix/trello-clone-web/blob/main/src/utils/authorizeAxios.js)
 
