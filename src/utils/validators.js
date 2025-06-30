@@ -21,5 +21,6 @@ export const singleFileValidator = (file) => {
   if (!ALLOW_COMMON_FILE_TYPES.includes(file.type)) {
     return 'File type is invalid. Only accept jpg, jpeg and png'
   }
+  // return null == khong co loi
   return null
 }

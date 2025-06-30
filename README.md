@@ -30,7 +30,7 @@ Users can create task boards with different columns and move the tasks between t
 
 👉 Users can change account information: displayed user name, password
 
-👉 Users can upload image as avatar
+👉 Users can upload image file as avatar
 
 👉 Users can create new column and add cards to those column
 
@@ -56,7 +56,7 @@ Users can create task boards with different columns and move the tasks between t
 ### Secondary technologies
 
 - **Front-end**: [Redux persist](https://www.npmjs.com/package/redux-persist), React-toastify, Axios (custom interceptors), cross-env, React-router-dom (protected routes), React-hook-form
-- **Back-end**: cors, [Joi](https://www.npmjs.com/package/joi) schema description language
+- **Back-end**: cors, [Joi](https://www.npmjs.com/package/joi) schema description language, [multer](https://www.npmjs.com/package/multer) middleware, [Cloudinary](https://cloudinary.com/) image API
 
 ## What I gained from building this project 😎
 
