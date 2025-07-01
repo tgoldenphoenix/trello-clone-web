@@ -66,6 +66,7 @@ function BoardContent({
 
   useEffect(() => {
     // Columns đã được sắp xếp ở component cha cao nhất (boards/_id.jsx) (v71)
+    // sắp xếp trong redux lúc lấy từ api về
     setOrderedColumns(board.columns)
   }, [board])
 
@@ -165,7 +166,7 @@ function BoardContent({
 
   // Trigger khi bắt đầu kéo (drag) một phần tử
   const handleDragStart = (event) => {
-    // console.log('handleDragStart: ', event)
+    // console.log('🐦‍🔥 ~ handleDragStart ~ event:', event)
     setActiveDragItemId(event?.active?.id)
     setActiveDragItemType(event?.active?.data?.current?.columnId ? ACTIVE_DRAG_ITEM_TYPE.CARD : ACTIVE_DRAG_ITEM_TYPE.COLUMN)
     setActiveDragItemData(event?.active?.data?.current)

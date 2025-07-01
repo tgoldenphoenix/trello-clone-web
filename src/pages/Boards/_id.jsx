@@ -23,15 +23,20 @@ import PageLoadingSpinner from '~/components/Loading/PageLoadingSpinner'
 function Board() {
   const dispatch = useDispatch()
   // const [board, setBoard] = useState(null)
+  // https://www.reddit.com/r/reactjs/comments/uy0mkw/why_the_code_below_useeffect_is_running_before/
   const board = useSelector(selectCurrentActiveBoard)
+  // console.log('🐦‍🔥 ~ Board ~ board:', board)
+  // console.log('ouside useEffect')
 
   const { boardId } = useParams()
+  // console.log('🐦‍🔥 ~ Board ~ boardId:', boardId)
 
   useEffect(() => {
     // const boardId = '67f4c9dc9988b61fdc0adcb0'
 
     // Call API
     dispatch(fetchBoardDetailsAPI(boardId))
+    // console.log('inside useEffect')
 
     // test loading spinner
     // dispatch(fetchBoardDetailsAPI('12312312'))
@@ -51,10 +56,11 @@ function Board() {
     const newBoard = { ...board }
     newBoard.columns = dndOrderedColumns
     newBoard.columnOrderIds = dndOrderedColumnsIds
+    // update state board phía front-end
     // setBoard(newBoard)
     dispatch(updateCurrentActiveBoard(newBoard))
 
-    // Gọi API update Board
+    // Gọi API update Board truyền data về back-end
     updateBoardDetailsAPI(newBoard._id, { columnOrderIds: dndOrderedColumnsIds })
   }
 

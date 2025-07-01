@@ -44,7 +44,7 @@ export const activeBoardSlice = createSlice({
   // ExtraReducers: process async data
   extraReducers: (builder) => {
     builder.addCase(fetchBoardDetailsAPI.fulfilled, (state, action) => {
-      // action.payload chính là response.data trả về ở trên
+      // action.payload chính là response.data trả về từ cái createAsyncThunk ở trên
       let board = action.payload
 
       // Sắp xếp thứ tự các column luôn ở đây trước khi đưa dữ liệu xuống bên dưới các component con (v71 đã giải thích lý do ở phần Fix bug quan trọng)
