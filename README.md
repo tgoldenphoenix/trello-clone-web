@@ -32,7 +32,9 @@ Users can create task boards with different columns and move the tasks between t
 
 👉 Users can upload image file as avatar
 
-👉 Users can create new column and add cards to those column
+👉 User can create new board. Each board contains columns and columns' cards. Each user can have multiple boards (apply pagination).
+
+👉 Users can create new column and add cards to those column.
 
 👉 Users can change columns' order by drag and drop
 
@@ -98,6 +100,8 @@ Route, Middleware, Validation, Controller, Service, Model
 🔵 Managing Front-end states in application with **Redux**:
 
 Using [Redux persist](https://www.npmjs.com/package/redux-persist) to store user slice into local storage. When user reload page, the user slice is not erased.
+
+🔵 Using back-end and front-end pagination technique to show user boards.
 
 🔵 Give users a way to toggle between light modes, dark mode and system preference by using Material UI `useColorScheme` hook. Also stored user's preference in local storage.
 
