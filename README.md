@@ -14,6 +14,39 @@ Users can create task boards with different columns and move the tasks between t
 
 [back-end github repo](https://github.com/tgoldenphoenix/trello-clone-api)
 
+## Database schema
+
+<details> 
+
+<summary>Open to read</summary>
+
+<br />
+
+![Database Schema](./screenshots/Database-schema.png)
+
+</details>
+
+## Technologies
+
+**Front-end**: 
+
+- ReactJS, React-router-dom (protected routes), React-hook-form, React-toastify
+- Material UI, [DND kit library](https://dndkit.com/)
+- Redux, [Redux persist](https://www.npmjs.com/package/redux-persist)
+- Axios (custom interceptors), cross-env
+
+**Back-end**: 
+
+- RESTful API built with NodeJS (Express Framework) 
+- custom `errorHandlingMiddleware`; [multer](https://www.npmjs.com/package/multer) middleware for uploading image
+- [Resend](https://resend.com/about) EaaS for sending email; [Cloudinary](https://cloudinary.com/) image API
+- JSON Web Token Authorization & Authentication (stored in HttpOnly Cookie)
+- [Joi](https://www.npmjs.com/package/joi) schema description language, 
+- cors
+
+- **Database**: MongoDB Atlas
+- **Built tools**: Vite, ESLint, Yarn, Babel, Node Version Manager
+
 ## Application Requirements 👀
 
 <details>
@@ -45,20 +78,6 @@ Users can create task boards with different columns and move the tasks between t
 👍 App needs Dark Mode and user can set light or dark mode based on computer preference.
 
 </details>
-
-## Technologies
-
-### Main technologies
-
-- **Front-end**: ReactJS, Material UI, Redux, [DND kit library](https://dndkit.com/)
-- **Back-end**: RESTful API built with NodeJS (Express Framework), [Resend](https://resend.com/about) EaaS, JSON Web Token Authorization & Authentication (stored in HttpOnly Cookie)
-- **Database**: MongoDB Atlas
-- **Built tools**: Vite, ESLint, Yarn, Babel, Node Version Manager
-
-### Secondary technologies
-
-- **Front-end**: [Redux persist](https://www.npmjs.com/package/redux-persist), React-toastify, Axios (custom interceptors), cross-env, React-router-dom (protected routes), React-hook-form
-- **Back-end**: cors, [Joi](https://www.npmjs.com/package/joi) schema description language, [multer](https://www.npmjs.com/package/multer) middleware, [Cloudinary](https://cloudinary.com/) image API
 
 ## What I gained from building this project 😎
 
@@ -116,18 +135,5 @@ Examples: Reusable AppBar Component, FieldErrorAlert Component, and ModeSelect C
 - Choosing suitable Technology Stack for high quality frontend development.
 
 🔵 This application is built with **Performance and Maintainability** in mind.
-
-</details>
-
-
-## Database schema
-
-<details> 
-
-<summary>Open to read</summary>
-
-<br />
-
-![Database Schema](./screenshots/Database-schema.png)
 
 </details>
