@@ -44,8 +44,9 @@ Users can create task boards with different columns and move the tasks between t
 - [Joi](https://www.npmjs.com/package/joi) schema description language, 
 - cors
 
-- **Database**: MongoDB Atlas
-- **Built tools**: Vite, ESLint, Yarn, Babel, Node Version Manager
+**Database**: MongoDB Atlas
+
+**Built tools**: Vite, ESLint, Yarn, Babel, Node Version Manager
 
 ## Application Requirements 👀
 

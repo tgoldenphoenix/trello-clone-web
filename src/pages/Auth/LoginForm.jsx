@@ -40,7 +40,7 @@ function LoginForm() {
 
     toast.promise(
       dispatch(loginUserAPI({ email, password })),
-      { pending: 'Logging in...' }
+      { pending: 'Logging in kkk...' }
     ).then(res => {
       // console.log(res)
       // Đoạn này phải kiểm tra không có lỗi (login thành công) thì mới redirect về route /

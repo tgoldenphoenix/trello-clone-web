@@ -33,6 +33,7 @@ authorizedAxiosInstance.interceptors.request.use((config) => {
 
   return config
 }, (error) => {
+  // console.log('🐦‍🔥 authorizeAxios ~ request error:', error)
   // Do something with request error
   return Promise.reject(error)
 })
@@ -110,7 +111,7 @@ authorizedAxiosInstance.interceptors.response.use((response) => {
 
   // Xử lý tập trung phần hiển thị thông báo lỗi trả về từ mọi API ở đây (viết code một lần: Clean Code)
   // console.log error ra là sẽ thấy cấu trúc data đẫn tới message lỗi như dưới đây
-  // console.log('Axios interceptor', error)
+  console.log('authorizeAxios ~ Axios interceptor response error: ', error)
 
   let errorMessage = error?.message
   if (error.response?.data?.message) {

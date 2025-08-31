@@ -19,6 +19,9 @@ import Boards from '~/pages/Boards'
 const ProtectedRoute = ({ user }) => {
   // console.log(user)
   if (!user) return <Navigate to='/login' replace={true} />
+
+  // try this!
+  // if (!user) return <Navigate to='/error-page' replace={true} />
   return <Outlet />
 }
 
@@ -33,6 +36,10 @@ function App() {
         // Ở đây cần replace giá trị true để nó thay thế route /, có thể hiểu là route / sẽ không còn nằm trong history của Browser
         // Thực hành dễ hiểu hơn bằng cách nhấn Go Home từ trang 404 xong thử quay lại bằng nút back của trình duyệt giữa 2 trường hợp có replace hoặc không có.
         <Navigate to='/boards' replace={true} />
+        // Navigate to `/boards` if not log in continue to navigate to 
+        // `/login`
+
+        // <>anhao</>
       } />
 
       {/* Protected Routes (Hiểu đơn giản trong dự án của chúng ta là những route chỉ cho truy cập sau khi đã login) */}

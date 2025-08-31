@@ -25,6 +25,7 @@ export const logoutUserAPI = createAsyncThunk(
 export const loginUserAPI = createAsyncThunk(
   'user/loginUserAPI',
   async (data) => {
+    // if error, read authorizeAxios:125
     const response = await authorizedAxiosInstance.post(`${API_ROOT}/v1/users/login`, data)
     // Lưu ý: axios sẽ trả kết quả về qua property của nó là data
     return response.data
@@ -51,6 +52,9 @@ export const userSlice = createSlice({
       // action.payload ở dây chính là cái response.data trả về ở trên
       const user = action.payload
       state.currentUser = user
+    })
+    builder.addCase(loginUserAPI.rejected, (state, action) => {
+      console.log('userSlice ~ extra Reducer loginUserAPI rejected')
     })
 
     builder.addCase(logoutUserAPI.fulfilled, (state) => {
